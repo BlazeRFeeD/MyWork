@@ -24,9 +24,7 @@ namespace MyWork.Services
         {
             var json = JsonSerializer.Serialize(userProfile);
 
-            var result = File.CreateText(path);
-            result.Close();
-            result.Dispose();
+            File.WriteAllText(path, json);
         }
     }
 }
